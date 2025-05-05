@@ -26,7 +26,7 @@ const Dashboard = () => {
             setName(decoded.name);
             setExpire(decoded.exp);
         } catch (error) {
-            console.log("gagal ngambil token");
+            console.log("gagal ngambil token",{error});
             if (error.response) {
                navigate("/");
             }
