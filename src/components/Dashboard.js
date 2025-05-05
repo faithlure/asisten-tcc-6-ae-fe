@@ -20,7 +20,7 @@ const Dashboard = () => {
 
     const refreshToken = async () => {
         try {
-            const response = await axios.get(`${BASE_URL}/token`);
+            const response = await axiosJWT.get(`${BASE_URL}/token`);
             setToken(response.data.accessToken);
             const decoded = jwtDecode(response.data.accessToken);
             setName(decoded.name);
